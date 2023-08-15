@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="shortcut icon" href="/images/home1.jpg" />
+<title>{{title}}</title>
+  {%block stylesheet%}
+
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link href="https://fonts.googleapis.com/css?family=Nova Flat" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Orbitron" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="/css/materialize.css">
+  <link rel="stylesheet" href="/css/animate.css" />
+  <link rel="stylesheet" href="/css/abc.css" />
+  <link rel="stylesheet" href="/font-awesome/css/font-awesome.min.css" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script type="text/javascript" src="../js/materialize.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+{%endblock%}
+</head>
+<body >
+
+ <!---  <div id="particles-js"></div> end of particle -->
+<div class="card-panel hoverable" >
+<nav class="nav-extended" >
+    <div class="nav-wrapper" >
+    <!--  <a href="#" class="brand-logo"><img src="../images/logo.png" style="height: 60px; width: 200px; border-radius: 12px;"></a> -->
+      <a href="#" data-activates="mobile-demo" class="button-collapse">
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <li><a style="color: #00bebe;" class="tooltipped" data-position="left" data-delay="50" data-tooltip="HOME" href="/">HOME</a></li>
+        <li><a  style="color: #00bebe;"class="tooltipped" data-position="top" data-delay="50" data-tooltip="ADMINISTRATION" href="/administration">ADMINISTRATION</a></li>
+        <li><a style="color: #00bebe;" class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="ACADEMICS" href="/academices">ACADEMICS</a></li>
+        <li><a style="color: #00bebe;" class=" tooltipped" data-position="top" data-delay="50" data-tooltip="FACILITIES" href="/facilities">FACILITIES</a></li>
+        <li ><a style="color: #00bebe;"class=" tooltipped" data-position="bottom" data-delay="50" data-tooltip="GALLERY" href="/gallery">GALLERY</a></li>
+    </ul>
+       <ul id="slide-out" class="side-nav">
+    <li><div class="user-view">
+      <div class="background">
+        <img src="images/home1.jpg">
+      </div>
+      <a href="#"><img class="circle" src="images/logo.png"></a>
+      <a href="#"><span class="white-text name">ABC College</span></a>
+      <a href="#"><span class="white-text email">abc@gmail.com</span></a>
+    </div></li>
+    <li><a href="/"><i class="material-icons">home</i>Home</a></li>
+    <li><a href="/administration"><i class="material-icons">accessibility</i>ADMINISTRATION</a></li>
+    <li><a href="/academices"><i class="material-icons">book</i>ACADEMICS</a></li>
+    <li><a href="/facilities"><i class="material-icons">donut_small</i>FACILITIES</a></li>
+    <li><a href="/gallery"><i class="material-icons">image</i>GALLERY</a></li>
+  <li><a class="waves-effect" href="/contact"><i class="material-icons">contact_mail</i>CONTACT US</a></li>
+  <li> <a class="waves-effect waves-light modal-trigger" href="#modal2"> <i class="material-icons">map</i>MAP</a></li>
+  </ul>
+  <a href="/" data-activates="slide-out" class="button-collapse"><i class="material-icons">menu </i></a>
+    </div>
+  </nav>
+</div>
+  <br>
+ {%block main%}
+
+<script type="text/javascript">
+ $(".button-collapse").sideNav();
+    $(document).ready(function(){
+      $('.slider').slider();
+    });
+         $(document).ready(function(){
+    $('.tooltipped').tooltip({delay: 50});
+  });
+</script>
+  <div class="slider" >
+  
+      </div>
+     
+   
+  {%endblock%}
+
+
+</div>
+</body>
+</html>

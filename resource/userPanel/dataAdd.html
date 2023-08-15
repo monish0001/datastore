@@ -1,0 +1,204 @@
+{%extends 'userPanel/dash.html'%}
+   
+   
+
+      {%block mainblock%} 
+    <div class="col s12 m12 l9">
+<main>
+  <section>
+    <div class="section">
+      <fieldset style="border-radius: 10px">
+        <legend><h5><b>ADD USER DATA</b></h5></legend>
+        <br>
+       
+
+
+     <div class="row">
+
+    <form action="/utils/request.php" class="col s12" method="POST">
+
+       <div class="row">
+
+        <div class="input-field col s12">
+
+          <i class="material-icons prefix">account_circle</i>
+          <input id="name" name="name" type="text" class="validate">
+          <label for="name"> Name</label>
+        </div>
+      </div>
+
+
+         <div class="row">
+        <div class="input-field col s12">
+          <i class="material-icons prefix">phone</i>
+          <input name="phone" id="phone" type="text" class="validate">
+          <label for="phone">Mobile</label>
+        </div>
+      </div>
+
+
+
+  <div class="row">
+              <div class="input-field col s12">
+                  <i class="material-icons prefix">date_range</i>
+                <input name = "dob" id="dob" type="text" class="datepicker">
+                <label for="dob">Date of Birth</label>
+              </div>
+</div>
+       <div class="row">
+                <div class="input-field col s12">
+                   <i class="material-icons prefix">child_care</i>
+                    <select name="age" id="age">
+                      <option value="below five" >age greater than five</option>
+                      <option value="above five">age less than five</option>
+                    </select>
+                    <label>Select your age</label>
+                  </div>
+              </div>
+
+
+
+           <div class="row">
+
+                <div class="input-field col s12">
+                   <i class="material-icons prefix">accessibility</i>
+                    <select name="gender" id="gender">
+                      <option value="Male" >Male</option>
+                      <option value="Female">Female</option>
+                        <option value="Others">Others</option>
+                    </select>
+                    <label>Select your Gender</label>
+                  </div>
+              </div>
+
+     
+       <div class="row">
+                <div class="input-field col s12">
+                   <i class="material-icons prefix">bookmark_border</i>
+                    <select name="quran" id="quran">
+                      <option value="Yes" >Yes</option>
+                      <option value="No">No</option>
+                        
+                    </select>
+                    <label>Able to read Quran</label>
+                  </div>
+              </div>
+
+
+              <div class="row">
+                <div class="input-field col s12">
+                   <i class="material-icons prefix">school</i>
+                    <select name="education" id="education">
+                      <option value="5" selected>class 5</option>
+                                                    <option value="8">class 8</option>
+                                                    <option value="10">class 10</option>
+                                                    <option value="12">class 12</option>
+                                                    <option value="gradutaion">Gradutaion (BSC, BA Etc.)</option>
+                                                    <option value="PostGradution">Post Gradution (MSC,MA,Etc.</option>
+                                                    <option value="PHD">Phd</option>
+                        
+                    </select>
+                    <label>Maximum Education</label>
+                  </div>
+              </div>
+
+             <div class="row">
+        <div class="input-field col s12">
+          <i class="material-icons prefix">tag_faces</i>
+          <input id="skils" name="skils" type="text" class="validate">
+          <label for="skils" >Skils Example- Teaching,Gambling .Etc. </label>
+        </div>
+      </div>
+
+
+        <div class="row">
+                <div class="input-field col s12">
+                   <i class="material-icons prefix">money</i>
+                    <select name="jobType" id="jobType">
+                      <option value="Government" >Government</option>
+                      <option value="Private">Private</option>
+                        <option value="Berojgar">Be-Rojgar</option>
+                    </select>
+                    <label>Select your job type</label>
+                  </div>
+              </div>
+
+
+               <div class="row">
+        <div class="input-field col s12">
+          <i class="material-icons prefix">ac_unit</i>
+          <input id="zameen" name="zameen" type="text" class="validate">
+          <label for="zameen" >Zameen in bigah </label>
+        </div>
+      </div>
+
+
+        <div class="row">
+                <div class="input-field col s12">
+                   <i class="material-icons prefix">home</i>
+                    <select name="residentType" id="residentType">
+                      <option value="Rent" >Rent</option>
+                      <option value="Own House">OwnHouse</option>
+                    </select>
+                    <label>Resident Type</label>
+                  </div>
+              </div>
+
+           <div class="row">
+                <div class="input-field col s12">
+                   <i class="material-icons prefix">location_on</i>
+                    <select name="state" id="state">
+                      <option selected value="1" >Uttar Pradesh</option>
+                    </select>
+                    <label>Select your State</label>
+                  </div>
+              </div>
+
+             <div class="row">
+                <div class="input-field col s12">
+                   <i class="material-icons prefix">location_on</i>
+                    <select name="district" id="district">
+                      <option selected value="1" >Bahraich</option>
+                    </select>
+                    <label>Select your District</label>
+                  </div>
+              </div>
+
+               <div class="row">
+                <div class="input-field col s12">
+                   <i class="material-icons prefix">location_on</i>
+                    <select name="village" id="village">
+                      <option selected value="1" >Rewali</option>
+                    </select>
+                    <label>Select your Villagee</label>
+                  </div>
+              </div>
+         
+
+      <button class="btn waves-effect waves-light" type="submit" name="addData">Submit
+    <i class="material-icons right">send</i>
+  </button>
+     
+    </form>
+  </div>
+  </fieldset>
+    </div>
+  </section>
+  <hr>
+ 
+<main>
+</div>
+
+<script type="text/javascript">
+  
+  
+   $(document).ready(function(){
+      $('select').formSelect();
+      $('.datepicker').datepicker({
+        format : 'yyyy-mm-dd'
+      });
+    });
+</script>
+
+          {%endblock%}
+

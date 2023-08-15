@@ -1,0 +1,85 @@
+{%extends 'adminPanel/dash.html'%}
+   
+   
+
+      {%block mainblock%} 
+    <div class="col s12 m12 l9">
+<main>
+  <section>
+    <div class="section">
+      <fieldset style="border-radius: 10px">
+        <legend><h5><b>UPDATE USER </b></h5></legend>
+        <br>
+       
+   
+     <div class="row">
+        {% for d in data %}
+    <form action="/utils/request.php" class="col s12" method="POST">
+      <input type="hidden" name="id" id="id" value="{{d.user_id}}">
+       <div class="row">
+        <div class="input-field col s12">
+          <i class="material-icons prefix">account_circle</i>
+          <input id="name" name="name" value="{{d.user_name}}" type="text" class="validate">
+          <label for="name"> Name</label>
+        </div>
+      </div>
+        <div class="row">
+        <div class="input-field col s12">
+          <i class="material-icons prefix">phone</i>
+          <input name="phone" value="{{d.user_phone}}" id="phone" type="text" class="validate">
+          <label for="phone">Mobile</label>
+        </div>
+      </div>
+
+       <div class="row">
+        <div class="input-field col s12">
+          <i class="material-icons prefix">email</i>
+            <input name="email" value="{{d.user_email}}"  id="email" type="text" class="validate">
+          <label  for="email">Email</label>
+        </div>
+      </div>
+
+       <div class="row">
+        <div class="input-field col s12">
+          <i class="material-icons prefix">key</i>
+            <input value="{{d.password}}" name="password"  id="password" type="text" class="validate">
+          <label for="password">Password</label>
+        </div>
+      </div>
+          <div class="row">
+              <div class="input-field col s12">
+                  <i class="material-icons prefix">home</i>
+                <input required type = "text" list="browsers" name = "village_id" id = "village_id">
+                <datalist id="browsers">
+
+                    {% for v in villleges %}
+                   <option value="{{v.id}}">{{v.name}}</option>
+                  
+                    {% endfor %}
+                 
+                </datalist>
+                <label for = "village_id">Allow Only one village</label>
+              </div>
+
+               </div>
+     
+
+      <button class="btn waves-effect waves-light" type="submit" name="updateuser">UPDATE
+    <i class="material-icons right">send</i>
+  </button>
+     
+    </form>
+      {% endfor %}
+  </div>
+  </fieldset>
+    </div>
+  </section>
+ 
+  
+<main>
+</div>
+
+
+
+          {%endblock%}
+

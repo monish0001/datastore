@@ -1,0 +1,47 @@
+{%extends 'adminPanel/dash.html'%}
+   
+   
+
+      {%block mainblock%} 
+    <div class="col s12 m12 l9">
+<main>
+ <div class="section">
+      <fieldset>
+        <legend><h5><b>Recently Added Data</b></h5></legend>
+        <br>
+          <table class="responsive-table">
+        <thead>
+          <tr>
+              <th>Name</th>
+              <th>Mobile</th>
+              <th>Education</th>
+              <th>DOB</th>
+               <th>Added By</th>
+               <th>Edit</th>
+          </tr>
+        </thead>
+
+        <tbody>
+
+            {% for d in data %}
+          <tr>
+            <td>{{d.name}}</td>
+            <td>{{d.phone}}</td>
+            <td>{{d.education}}</td>
+            <td>{{d.dob}}</td>
+            <td>{{d.user_name}}</td>
+               <td ><a  class="btn-floating  red lighten-1" onclick="return getUpdateConfirmation();" href="/adminPanel/uodateuser/?id=1"> <i class=" material-icons">edit</i></a></td>
+          </tr>
+            {% endfor %}
+        </tbody>
+      </table>
+            
+      </fieldset>
+    </div>
+  </section>
+<main>
+</div>
+
+
+          {%endblock%}
+

@@ -1,0 +1,45 @@
+{%extends 'adminPanel/dash.html'%}
+   
+   
+
+      {%block mainblock%} 
+    <div class="col s12 m12 l9">
+<main>
+ 
+
+
+   <div class="section">
+      <fieldset style="border-radius: 10px;">
+        <legend><h5><b>ALL STATES</b></h5></legend>
+        <br>
+        <div class="row">
+            {% for state in states %}
+              <div class="col s12 m4">
+                <div class="card">
+                  <div class="card-image">
+                    <img src="/{{state.img}}">
+                    <span  class="card-title"><b>{{state.name}}</b></span>
+                  </div>
+                  <div class="card-content">
+                    <p>Hi, This section contains all the data of  {{ state.name }} state you can see all the districts and villages ans there corosponding data.
+                    to see all the data click the link given blew .</p>
+                  </div>
+                  <div class="card-action">
+                    <a class="btn waves-effect waves-light"  href="/adminPanel/managedata/districtlist?id={{state.id}}">Districts <i class="material-icons right">send</i></a>
+                  </div>
+                </div>
+              </div>
+      {% endfor %}
+     
+  </div>
+      </fieldset>
+    </div>
+  </section>
+  
+<main>
+</div>
+
+
+
+          {%endblock%}
+

@@ -1,0 +1,46 @@
+{%extends 'userPanel/dash.html'%}
+   
+   
+
+      {%block mainblock%} 
+    <div class="col s12 m12 l9">
+<main>
+   <section>
+
+      <div class="section">
+      <fieldset>
+        <legend><h5><b>Prevous User Details</b></h5></legend>
+        <br>
+          <table class="responsive-table">
+        <thead>
+          <tr>
+              <th>Name</th>
+              <th>Mobile</th>
+              <th>Education</th>
+              <th>DOB</th>
+          </tr>
+        </thead>
+
+        <tbody>
+
+            {% for d in data %}
+          <tr>
+            <td>{{d.name}}</td>
+            <td>{{d.phone}}</td>
+            <td>{{d.education}}</td>
+            <td>{{d.dob}}</td>
+             
+          </tr>
+            {% endfor %}
+        </tbody>
+      </table>
+            
+      </fieldset>
+    </div>
+  </section>
+<main>
+</div>
+
+
+          {%endblock%}
+
